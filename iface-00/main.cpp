@@ -7,8 +7,6 @@
                      << #__VA_ARGS__ << " --> " << (__VA_ARGS__)\
                      << std::endl)
 int main() {
-    std::cout.setf(std::ios::boolalpha);
-    
     Clock c{};              SHOW(c);
     c.TickUp();             SHOW(c);
     c.TickUp();             SHOW(c);

@@ -19,8 +19,8 @@ Currently a `Clock` instance is used directly in the main
 program, which does only some basic tests of a Clock's
 functionality.
 
-These are the overall goals of the next five steps of this
-refactoring:
+This is a summary of the overall goal of the next steps of
+this refactoring:
 - Shift the actual USE of the Clock
   - AWAY from the `main` function implemented in
     `main.cpp`
@@ -28,13 +28,12 @@ refactoring:
 - **Avoid the latter needs to know the details about how a
   Clock is implemented.**
   - To compile `appl.cpp` it should suffice to know how
-    a Clock is menat to be used by its interface.
+    a Clock is meant to be used by its interface.
   - Nothing but the header file of the interface should be
     required to include into the translation unit.
 - The actual Clock objects will (still) be provided by the
   `main` function.
   - Therefore in `main.cpp` the header file defining the
-    class `Clock`` (still) need to ne included.
-  - This header in turn will include the heder of the
-    interface `IClock`, therefore its definition is
-    available too.
+    class `Clock` (still) needs to be included.
+  - As `Clock.h` in turn includes the header of the
+    interface `IClock` its definition is available too.

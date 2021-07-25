@@ -7,5 +7,5 @@ main: *.cpp *.h
 clean:
 	-rm -f *.o a.out core main
 zip: clean
-	zip ../iface-01.zip *.md *.cpp *.h Makefile
+	zip ../iface-02.zip *.md *.cpp *.h Makefile
 .PHONY: all run clean zip
